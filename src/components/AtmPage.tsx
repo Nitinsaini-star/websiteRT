@@ -1,5 +1,4 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { Camera } from 'lucide-react';
 import { BIRTHDAY_CONFIG, MEMORIES_LIST, BALANCE_LIST } from '../types';
 import { playAtmBeep, playCelebrationChime } from '../utils/audio';
 
@@ -366,44 +365,11 @@ export const AtmPage: React.FC<AtmPageProps> = ({
                         style={{ cursor: 'pointer', position: 'relative' }}
                         title="Tap to set or change this photo"
                       >
-                        {customPhotos[memoryIndex] ? (
-                          <img
-                            src={customPhotos[memoryIndex]}
-                            alt={MEMORIES_LIST[memoryIndex].caption}
-                            loading="lazy"
-                          />
-                        ) : (
-                          <div
-                            style={{
-                              display: 'flex',
-                              flexDirection: 'column',
-                              alignItems: 'center',
-                              justifyContent: 'center',
-                              height: '100%',
-                              backgroundColor: '#fffdf8',
-                              color: '#7b3944',
-                              padding: '16px',
-                              textAlign: 'center',
-                            }}
-                          >
-                            <Camera size={34} color="#b85f68" />
-                            <strong style={{ fontSize: '13px', marginTop: '8px' }}>
-                              Photo #{memoryIndex + 1}
-                            </strong>
-                            <span
-                              style={{
-                                fontSize: '11px',
-                                marginTop: '4px',
-                                color: '#b85f68',
-                                backgroundColor: '#fbe3e0',
-                                padding: '3px 8px',
-                                borderRadius: '10px',
-                              }}
-                            >
-                              Tap to select real photo
-                            </span>
-                          </div>
-                        )}
+                        <img
+                          src={customPhotos[memoryIndex] || MEMORIES_LIST[memoryIndex].img}
+                          alt={MEMORIES_LIST[memoryIndex].caption}
+                          loading="lazy"
+                        />
                       </div>
                       <p>&quot;{MEMORIES_LIST[memoryIndex].caption}&quot;</p>
                       <div className="atm-nav-row">
