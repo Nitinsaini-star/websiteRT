@@ -1,0 +1,6 @@
+{
+  "name": "Happy Birthday Madam Jii - Ritti Devi Jii",
+  "description": "An interactive 8-chapter birthday celebration for Ritti Devi Jii with passkey unlock, heartfelt letter, scratch card, love meter, Photo Bank Memory ATM with PIN 1810, interactive cake cutting, and gift box.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
